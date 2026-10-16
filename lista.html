@@ -24,11 +24,13 @@
   .btn { display:block; background:#53B175; color:#fff; text-decoration:none; font-weight:700;
          border-radius:16px; padding:16px; font-size:18px; margin:18px 0; }
   .note { color:#7C7C7C; font-size:14px; line-height:1.5; }
+  .made { text-align:center; color:#7C7C7C; font-size:13px; padding:6px 20px 28px; }
+  .made a { color:#53B175; font-weight:700; text-decoration:none; }
 </style>
 </head>
 <body>
   <div class="top">
-    <img class="logo" src="/mercadinho/simbolo-branco.svg" alt="">
+    <img class="logo" src="simbolo-branco.svg" alt="">
     <h1>Listão</h1>
     <p>Você recebeu uma lista de compras!</p>
   </div>
@@ -37,6 +39,7 @@
     <p class="note" id="msg">Abrindo o app… Se nada acontecer, toque no botão acima.</p>
     <p class="note">Ainda não tem o Listão? Peça para quem enviou 😉</p>
   </div>
+  <footer class="made">Feita com 💚 no <a href="https://listao-br.vercel.app/">Listão</a> · <a href="https://listao-br.vercel.app/">baixe o app grátis</a></footer>
 <script>
   var d = new URLSearchParams(location.search).get("d");
   var btn = document.getElementById("openBtn");
