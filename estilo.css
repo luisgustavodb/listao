@@ -145,6 +145,11 @@ p { margin: 0 0 10px; }
   display: flex; align-items: center; justify-content: center; text-align: center;
   font-size: 14px;
 }
+.qr-img {
+  width: 190px; height: 190px; display: block;
+  border-radius: var(--radius);
+  background: #fff; padding: 10px;
+}
 
 /* ---------- depoimentos ---------- */
 .quotes { padding: 70px 24px 10px; }
