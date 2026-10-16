@@ -91,7 +91,7 @@ p { margin: 0 0 10px; }
   box-shadow: var(--shadow);
 }
 .screen { background: #1E1F22; border-radius: 26px; overflow: hidden; }
-.screen img { width: 100%; display: block; }
+.screen img { width: 100%; height: auto; display: block; }
 
 /* ---------- features alternadas ---------- */
 .features { padding: 70px 24px 30px; }
@@ -107,7 +107,7 @@ p { margin: 0 0 10px; }
 .icon-chip svg { width: 28px; height: 28px; fill: currentColor; }
 .feat-copy p { color: var(--gray); max-width: 440px; }
 .feat-img img {
-  width: 100%; max-width: 330px; display: block; margin: 0 auto;
+  width: 100%; max-width: 330px; height: auto; display: block; margin: 0 auto;
   border-radius: 22px; border: 1px solid var(--line); box-shadow: var(--shadow);
 }
 
