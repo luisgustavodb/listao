@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://listao-br.vercel.app/sitemap.xml
