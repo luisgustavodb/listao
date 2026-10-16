@@ -32,6 +32,7 @@
 <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
 <link rel="stylesheet" href="estilo.css">
 <link rel="preload" as="image" href="prints/lista-marcados.webp" fetchpriority="high">
+<link rel="preload" as="image" href="prints/lista-marcados.webp" fetchpriority="high">
 </head>
 <body>
 
@@ -47,7 +48,7 @@
       <a href="#como-instalar">Como instalar</a>
       <a href="#perguntas">Perguntas</a>
     </nav>
-    <a class="btn primary small" href="listao-v1.3.apk" download="listao-v1.3.apk">Baixar grátis</a>
+    <a class="btn primary small" data-trk="click_download" data-pos="header" href="listao-v1.3.apk" download="listao-v1.3.apk">Baixar grátis</a>
   </div>
 </header>
 
@@ -60,8 +61,8 @@
       <h1>Sua lista de compras, <span class="verde">simples assim</span></h1>
       <p class="lead">Grátis, offline e sem cadastro. Monte a lista, controle o gasto e compartilhe por um link no WhatsApp — quem toca, abre.</p>
       <div class="btn-row">
-        <a class="btn primary" href="listao-v1.3.apk" download="listao-v1.3.apk">⬇ Baixar grátis (Android)</a>
-        <a class="btn ghost" href="#como-instalar">Como instalar</a>
+        <a class="btn primary" data-trk="click_download" data-pos="hero" href="listao-v1.3.apk" download="listao-v1.3.apk">⬇ Baixar grátis (Android)</a>
+        <a class="btn ghost" data-trk="click_como_instalar" href="#como-instalar">Como instalar</a>
       </div>
       <p class="meta">v1.3 · ~1,4 MB · APK direto · atualizado hoje</p>
       <div class="badges">
@@ -90,7 +91,7 @@
       </span>
       <h2>Organize e compartilhe</h2>
       <p>Categorias com cor e emoji pra cada cantinho da lista. E na hora de dividir as compras, a lista viaja dentro de um link do WhatsApp — quem toca, abre.</p>
-      <a class="btn ghost" href="#baixar">Ver como funciona</a>
+      <a class="btn ghost" href="#baixar" data-trk="click_ver_prints" data-pos="org">Ver como funciona</a>
     </div>
     <div class="feat-img">
       <img src="prints/categorias.webp" alt="Lista de compras organizada por categorias no app Listão" width="1080" height="2460" loading="lazy" decoding="async">
@@ -104,7 +105,7 @@
       </span>
       <h2>Gasto sob controle</h2>
       <p>Preço, quantidade e total em tempo real. Defina um orçamento e acompanhe nos gráficos pra onde o dinheiro foi.</p>
-      <a class="btn ghost" href="#baixar">Ver como funciona</a>
+      <a class="btn ghost" href="#baixar" data-trk="click_ver_prints" data-pos="gasto">Ver como funciona</a>
     </div>
     <div class="feat-img">
       <img src="prints/graficos.webp" alt="Gráficos de gastos por categoria no app Listão" width="1080" height="2460" loading="lazy" decoding="async">
@@ -118,7 +119,7 @@
       </span>
       <h2>Nunca esqueça o que já comprou</h2>
       <p>Cada compra finalizada vira histórico. Veja o que comprou, quando e por quanto — ótimo pra comparar preços entre idas.</p>
-      <a class="btn ghost" href="#baixar">Ver como funciona</a>
+      <a class="btn ghost" href="#baixar" data-trk="click_ver_prints" data-pos="historico">Ver como funciona</a>
     </div>
     <div class="feat-img">
       <img src="prints/historico.webp" alt="Histórico de compras no app Listão" width="1080" height="2460" loading="lazy" decoding="async">
@@ -132,7 +133,7 @@
       </span>
       <h2>Feche a compra com um toque</h2>
       <p>No fim das compras, finalize: o que você marcou vira uma compra salva no histórico, com o total certinho.</p>
-      <a class="btn ghost" href="#baixar">Ver como funciona</a>
+      <a class="btn ghost" href="#baixar" data-trk="click_ver_prints" data-pos="finalizar">Ver como funciona</a>
     </div>
     <div class="feat-img">
       <img src="prints/finalizar.webp" alt="Finalizar compra com total no app Listão" width="1080" height="2460" loading="lazy" decoding="async">
@@ -185,7 +186,7 @@
       <li><svg viewBox="0 0 24 24"><path d="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z"/></svg> Backup em arquivo .json</li>
       <li><svg viewBox="0 0 24 24"><path d="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z"/></svg> Tema claro e escuro</li>
     </ul>
-    <a class="btn primary wide" href="listao-v1.3.apk" download="listao-v1.3.apk">⬇ Baixar grátis (Android)</a>
+    <a class="btn primary wide" data-trk="click_download" data-pos="preco" href="listao-v1.3.apk" download="listao-v1.3.apk">⬇ Baixar grátis (Android)</a>
     <p class="pix-note">Gostou? <b>Apoie com Pix ☕</b> — botão nos Ajustes do app.</p>
     <p class="soon">Em breve: sincronização entre aparelhos e listas compartilhadas editáveis.</p>
   </div>
@@ -198,10 +199,11 @@
       <img class="final-logo" src="simbolo-branco.svg" alt="">
       <h2>Baixe o Listão hoje</h2>
       <p>Sua próxima ida ao mercado, mais barata e sem esquecer nada.</p>
-      <a class="btn white" href="listao-v1.3.apk" download="listao-v1.3.apk">⬇ Baixar grátis (APK)</a>
+      <a class="btn white" data-trk="click_download" data-pos="final" href="listao-v1.3.apk" download="listao-v1.3.apk">⬇ Baixar grátis (APK)</a>
       <p class="meta light">v1.3 · ~1,4 MB · Android 8 ou superior</p>
     </div>
     <div><img class="qr-img" src="qr-download.png" alt="QR Code para baixar o Listão"></div>
+    <div style="text-align:center;margin-top:10px"><a class="wa-link" data-trk="click_whatsapp" href="https://wa.me/?text=Baixe%20o%20List%C3%A3o%20gr%C3%A1tis%20para%20Android%3A%20https%3A%2F%2Flistao-br.vercel.app%2F" target="_blank" rel="noopener">No computador? Envie o link pro seu WhatsApp</a></div>
   </div>
 </section>
 
@@ -223,20 +225,20 @@
 <!-- ===== FAQ ===== -->
 <section id="perguntas" class="container faq">
   <h2 class="center">Perguntas frequentes</h2>
-  <details>
-    <summary>Por que não está na Play Store?</summary>
+  <details data-q="play">
+      <summary>Por que não está na Play Store?</summary>
     <p>Por enquanto distribuímos direto: fica mais leve, sem intermediário e com atualização no mesmo link. A ideia é entrar na Play quando o app amadurecer.</p>
   </details>
-  <details>
-    <summary>É seguro? O celular mostrou um aviso</summary>
+  <details data-q="seguro">
+      <summary>É seguro? O celular mostrou um aviso</summary>
     <p>O aviso aparece para qualquer app instalado de fora da loja. O APK é assinado, pede só permissão de internet e seus dados ficam no seu aparelho.</p>
   </details>
-  <details>
-    <summary>Funciona no iPhone?</summary>
+  <details data-q="iphone">
+      <summary>Funciona no iPhone?</summary>
     <p>Ainda não. Hoje o Listão é Android — o link compartilhado abre uma página com a lista pra quem tem iPhone.</p>
   </details>
-  <details>
-    <summary>Como atualizo depois?</summary>
+  <details data-q="atualizar">
+      <summary>Como atualizo depois?</summary>
     <p>Baixe de novo neste mesmo link e instale por cima. Suas listas e o histórico ficam intactos.</p>
   </details>
 </section>
