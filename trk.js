@@ -3,7 +3,7 @@
 (function () {
   if (/notrack/.test(location.search)) return;
   var SB_URL = 'https://ejzaphuabrqscrytfpcd.supabase.co';
-  var KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVqemFwaHVhYnJxc2NyeXRmcGNkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIwMzc0MDcsImV4ZXAiOjIxMDc2MTM0MDd9.uXNj7kpcB0sTwsHsg8z-uJVko_hzlXLT4pmZCUJ0MbA';
+  var KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVqemFwaHVhYnJxc2NyeXRmcGNkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIwMzc0MDcsImV4cCI6MjEwNzYxMzQwN30.uXNj7kpcB0sTwsHsg8Z-uJVko_hzlXLT4pmZCUJ0MbA';
   var PAGE = location.pathname.replace(/\/index\.html$/, '/') || '/';
   var sid = null;
   try {
