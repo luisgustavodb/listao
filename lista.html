@@ -26,6 +26,7 @@
   .note { color:#7C7C7C; font-size:14px; line-height:1.5; }
   .made { text-align:center; color:#7C7C7C; font-size:13px; padding:6px 20px 28px; }
   .made a { color:#53B175; font-weight:700; text-decoration:none; }
+  .made a.btn-dl { display:block; max-width:300px; margin:10px auto 0; background:#53B175; color:#fff; font-size:16px; border-radius:16px; padding:13px; }
 </style>
 </head>
 <body>
@@ -37,9 +38,8 @@
   <div class="card">
     <a class="btn" id="openBtn" href="#">Abrir no app</a>
     <p class="note" id="msg">Abrindo o app… Se nada acontecer, toque no botão acima.</p>
-    <p class="note">Ainda não tem o Listão? Peça para quem enviou 😉</p>
   </div>
-  <footer class="made">Feita com 💚 no <a href="https://listao-br.vercel.app/">Listão</a> · <a href="https://listao-br.vercel.app/">baixe o app grátis</a></footer>
+  <footer class="made">Feita com 💚 no <a href="https://listao-br.vercel.app/">Listão</a><a class="btn-dl" href="https://listao-br.vercel.app/">⬇ Baixar o app grátis</a></footer>
 <script>
   var d = new URLSearchParams(location.search).get("d");
   var btn = document.getElementById("openBtn");
