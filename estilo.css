@@ -175,6 +175,16 @@ summary::after {
 details[open] summary::after { transform: rotate(180deg); }
 details p { color: var(--gray); padding-bottom: 16px; margin: 0; }
 
+/* ---------- feedback ---------- */
+.feedback { max-width: 640px; padding-top: 10px; padding-bottom: 70px; }
+.fb-form { background:#fff; border:1px solid var(--line); border-radius:22px; box-shadow:var(--shadow); padding:26px; display:flex; flex-direction:column; gap:14px; margin-top:8px; }
+.fb-form label { font-weight:700; font-size:14px; display:flex; flex-direction:column; gap:6px; }
+.fb-form input, .fb-form textarea { border:1.5px solid var(--line); border-radius:14px; padding:13px 14px; font-size:15px; font-family:inherit; width:100%; resize:vertical; }
+.fb-form input:focus, .fb-form textarea:focus { outline:none; border-color:var(--green); box-shadow:0 0 0 3px rgba(83,177,117,.15); }
+.hp { display:none !important; }
+.fb-alt { text-align:center; font-size:13px; color:var(--gray); margin:4px 0 0; }
+.fb-alt a { color:var(--green); font-weight:700; }
+
 /* ---------- footer ---------- */
 footer { background: var(--bg-soft); padding: 48px 0 22px; }
 .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 30px; }
