@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lista compartilhada — Listão</title>
+<link rel="icon" type="image/svg+xml" href="/listao/favicon.svg">
+<link rel="icon" type="image/png" sizes="48x48" href="/listao/favicon-48.png">
+<meta property="og:title" content="🛒 Lista de compras compartilhada">
+<meta property="og:description" content="Alguém compartilhou uma lista de compras com você. Toque para abrir no app Listão!">
+<meta property="og:image" content="https://luisgustavodb.github.io/listao/og-logo.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<style>
+  body { margin:0; font-family:system-ui,-apple-system,sans-serif; background:#fff; color:#181725; }
+  .top { background:#53B175; color:#fff; padding:40px 20px 30px; text-align:center; }
+  .logo { width:56px; height:56px; display:block; margin:0 auto 10px; }
+  .top h1 { margin:0; font-size:30px; }
+  .top p { margin:8px 0 0; opacity:.9; }
+  .card { max-width:420px; margin:24px auto; padding:0 20px; text-align:center; }
+  .btn { display:block; background:#53B175; color:#fff; text-decoration:none; font-weight:700;
+         border-radius:16px; padding:16px; font-size:18px; margin:18px 0; }
+  .note { color:#7C7C7C; font-size:14px; line-height:1.5; }
+</style>
+</head>
+<body>
+  <div class="top">
+    <img class="logo" src="/mercadinho/simbolo-branco.svg" alt="">
+    <h1>Listão</h1>
+    <p>Você recebeu uma lista de compras!</p>
+  </div>
+  <div class="card">
+    <a class="btn" id="openBtn" href="#">Abrir no app</a>
+    <p class="note" id="msg">Abrindo o app… Se nada acontecer, toque no botão acima.</p>
+    <p class="note">Ainda não tem o Listão? Peça para quem enviou 😉</p>
+  </div>
+<script>
+  var d = new URLSearchParams(location.search).get("d");
+  var btn = document.getElementById("openBtn");
+  var msg = document.getElementById("msg");
+  if (d) {
+    var scheme = "mercadinho://l/" + d;
+    var intent = "intent://l/" + d + "#Intent;scheme=mercadinho;package=br.com.mercadinho;end";
+    var ua = navigator.userAgent.toLowerCase();
+    btn.href = /android/.test(ua) ? intent : scheme;
+    setTimeout(function () {
+      msg.textContent = "Não abriu? Verifique se o Listão está instalado neste aparelho.";
+    }, 1500);
+  } else {
+    msg.textContent = "Link incompleto — peça o link completo para quem enviou.";
+    btn.style.display = "none";
+  }
+</script>
+</body>
+</html>
