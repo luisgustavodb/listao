@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sobre o Listão — o app de lista de compras feito no Brasil</title>
+<meta name="description" content="Conheça o Listão: app de lista de compras grátis, offline e sem cadastro, feito no Brasil por um desenvolvedor independente. Saiba por que ele não coleta seus dados.">
+<link rel="canonical" href="https://listao-br.vercel.app/sobre.html">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#53B175">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Listão">
+<meta property="og:title" content="Sobre o Listão">
+<meta property="og:description" content="App de lista de compras grátis, offline e sem cadastro, feito no Brasil.">
+<meta property="og:url" content="https://listao-br.vercel.app/sobre.html">
+<meta property="og:image" content="https://listao-br.vercel.app/og-logo.png">
+<link rel="stylesheet" href="estilo.css">
+<style>
+  .sobre-hero { padding: 48px 0 8px; max-width: 720px; }
+  .sobre-hero h1 { font-size: 36px; }
+  .sobre p { color: #454552; font-size: 16.5px; }
+  .valores { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 28px 0; }
+  .valor { background: #F2F3F2; border-radius: 18px; padding: 20px; }
+  .valor h3 { font-size: 17px; margin: 0 0 6px; }
+  .valor p { font-size: 14.5px; margin: 0; color: #454552; }
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0; }
+  @media (max-width: 640px) { .sobre-hero h1 { font-size: 28px; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="container top-row">
+    <a class="brand" href="#"><img src="simbolo-verde.svg" alt="">Listão</a>
+    <nav>
+      <a href="#recursos">Recursos</a>
+      <a href="guias/compartilhar-whatsapp.html">Guia do WhatsApp</a>
+    </nav>
+    <a class="btn primary small" href="listao-v1.5.apk" download>Baixar grátis</a>
+  </div>
+</header>
+
+<main class="container">
+  <section class="sobre-hero">
+    <h1>Sobre o Listão</h1>
+    <p>O Listão nasceu de uma irritação comum: todo app de lista de compras pedia cadastro, empurrava anúncio ou queria guardar minha vida na nuvem. Eu só queria marcar que comprei o arroz.</p>
+    <p>Então eu mesmo fiz o meu. O Listão é um <strong>app de lista de compras para Android</strong>, criado e mantido no Brasil, que funciona do jeito que uma lista de papel funciona — só que no bolso: abre rápido, não pede nada seu e faz as contas por você.</p>
+    <p>Ele é desenvolvido de forma independente por <strong>Luis Gustavo Del Bianco</strong>. Cada funcionalidade nasce de uso real — das categorias arrastáveis ao alerta de orçamento estourado — e o feedback de quem usa vai direto pra próxima versão.</p>
+  </section>
+
+  <section>
+    <h2>O que o Listão acredita</h2>
+    <div class="valores">
+      <div class="valor">
+        <h3>Seus dados são seus</h3>
+        <p>Tudo fica no seu aparelho. Sem conta, sem nuvem obrigatória, sem vender seu comportamento. A lista compartilhada viaja no próprio link — não fica salva em servidor nenhum.</p>
+      </div>
+      <div class="valor">
+        <h3>Offline primeiro</h3>
+        <p>Feito pra funcionar no mercado, no estacionamento, onde o sinal morre. Internet só entra quando você quer compartilhar ou baixar o app.</p>
+      </div>
+      <div class="valor">
+        <h3>Grátis de verdade</h3>
+        <p>Sem anúncios invasivas, sem versão "pro" escondendo o básico. Quem quiser apoiar pode pagar um café — e só.</p>
+      </div>
+      <div class="valor">
+        <h3>Feito pra durar</h3>
+        <p>Interface simples e atualizações no mesmo link. Baixou de novo, instalou por cima: suas listas e histórico continuam lá.</p>
+      </div>
+    </div>
+    <h2>Como ele é mantido</h2>
+    <p>Hoje, com um emprego de dia e este projeto de noite. O site é estático, o app é distribuído direto por APK e não existe custo por usuário — por isso dá pra manter grátis. Se o Listão te ajuda no mercado, o melhor apoio é contar pra alguém: mande uma lista pro grupo da família.</p>
+    <div class="btns">
+      <a class="btn primary" href="listao-v1.5.apk" download>⬇ Baixar grátis (APK)</a>
+      <a class="btn ghost" href="#contato">Falar com o desenvolvedor</a>
+    </div>
+    <h2>Veja também</h2>
+    <p><a href="guias/compartilhar-whatsapp.html" style="color:#53B175;font-weight:700">Como compartilhar lista no WhatsApp</a> ·
+       <a href="modelos/feira.html" style="color:#53B175;font-weight:700">Modelo de lista da feira</a> ·
+       <a href="modelos/churrasco.html" style="color:#53B175;font-weight:700">Lista de churrasco</a> ·
+       <a href="modelos/mes.html" style="color:#53B175;font-weight:700">Lista do mês</a> ·
+       <a href="privacidade.html" style="color:#53B175;font-weight:700">Política de privacidade</a></p>
+  </section>
+</main>
+
+<footer style="margin-top:40px;border-top:1px solid #E2E2E2">
+  <div class="container copy" style="padding:20px 24px">© 2026 Listão · feito no Brasil · <a href="index.html" style="color:#53B175;text-decoration:none;font-weight:700">listao-br.vercel.app</a></div>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AboutPage","name":"Sobre o Listão","description":"App de lista de compras grátis, offline e sem cadastro, feito no Brasil.","mainEntity":{"@type":"Organization","name":"Listão","founder":{"@type":"Person","name":"Luis Gustavo Del Bianco"}}}
+</script>
+<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+</body>
+</html>
