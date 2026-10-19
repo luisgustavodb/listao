@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://listao-br.vercel.app/og-logo.png">
 <link rel="stylesheet" href="../estilo.css">
 <style>
-  .guide-hero { padding: 48px 0 8px; }
+  .guide-hero { padding: 44px 10px 8px; }
   .guide-hero h1 { font-size: 36px; }
   .step { display: flex; gap: 18px; margin: 26px 0; align-items: flex-start; }
   .step-num { flex: 0 0 44px; height: 44px; border-radius: 50%; background: #53B175; color: #fff;
@@ -29,8 +29,12 @@
   .step-body img { max-width: 320px; width: 100%; border-radius: 18px; border: 1px solid #E2E2E2; margin-top: 10px; display: block; }
   .note { background: #F2F3F2; border-radius: 18px; padding: 18px 22px; margin: 26px 0; font-size: 15px; }
   .mais a { display: inline-block; margin: 0 14px 10px 0; font-weight: 700; color: #53B175; text-decoration: none; }
-  .btns { display: flex; flex-wrap: wrap; gap: 12px; margin: 18px 0; }
-  @media (max-width: 640px) { .guide-hero h1 { font-size: 27px; } }
+  .btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 18px 0; }
+  @media (max-width: 640px) {
+    .guide-hero { padding: 32px 8px 4px; text-align: center; }
+    .guide-hero h1 { font-size: 26px; }
+    .mais { text-align: center; }
+  }
 </style>
 </head>
 <body>

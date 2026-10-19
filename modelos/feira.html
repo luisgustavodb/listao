@@ -19,9 +19,9 @@
 <meta property="og:image" content="https://listao-br.vercel.app/og-logo.png">
 <link rel="stylesheet" href="../estilo.css">
 <style>
-  .model-hero { padding: 48px 0 8px; }
+  .model-hero { padding: 44px 10px 8px; }
   .model-hero h1 { font-size: 36px; }
-  .btns { display: flex; flex-wrap: wrap; gap: 12px; margin: 18px 0 6px; }
+  .btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 20px 0 8px; }
   .hint { color: #7C7C7C; font-size: 14px; margin: 8px 0 32px; }
   .tbl { width: 100%; border-collapse: collapse; margin: 0 0 26px; font-size: 15px; }
   .tbl th { text-align: left; color: #7C7C7C; font-size: 13px; text-transform: uppercase; letter-spacing: .4px; padding: 8px 10px; border-bottom: 2px solid #E2E2E2; }
@@ -32,7 +32,11 @@
   .dicas ul { margin: 8px 0 0; padding-left: 20px; }
   .dicas li { margin: 8px 0; }
   .mais a { display: inline-block; margin: 0 14px 10px 0; font-weight: 700; color: #53B175; text-decoration: none; }
-  @media (max-width: 640px) { .model-hero h1 { font-size: 28px; } }
+  @media (max-width: 640px) {
+    .model-hero { padding: 32px 8px 4px; text-align: center; }
+    .model-hero h1 { font-size: 27px; }
+    .hint, .mais { text-align: center; }
+  }
 </style>
 </head>
 <body>

@@ -19,15 +19,18 @@
 <meta property="og:image" content="https://listao-br.vercel.app/og-logo.png">
 <link rel="stylesheet" href="estilo.css">
 <style>
-  .sobre-hero { padding: 48px 0 8px; max-width: 720px; }
+  .sobre-hero { padding: 44px 10px 8px; max-width: 720px; }
   .sobre-hero h1 { font-size: 36px; }
   .sobre p { color: #454552; font-size: 16.5px; }
   .valores { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 28px 0; }
   .valor { background: #F2F3F2; border-radius: 18px; padding: 20px; }
   .valor h3 { font-size: 17px; margin: 0 0 6px; }
   .valor p { font-size: 14.5px; margin: 0; color: #454552; }
-  .btns { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0; }
-  @media (max-width: 640px) { .sobre-hero h1 { font-size: 28px; } }
+  .btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 22px 0; }
+  @media (max-width: 640px) {
+    .sobre-hero { padding: 32px 8px 4px; text-align: center; }
+    .sobre-hero h1 { font-size: 27px; }
+  }
 </style>
 </head>
 <body>
