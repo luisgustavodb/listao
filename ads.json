@@ -1,0 +1,19 @@
+{
+  "enabled": true,
+  "minVersionCode": 4,
+  "noAdsFirstSessions": 2,
+  "banner": {
+    "history": true,
+    "dashboard": true
+  },
+  "nativeHistory": {
+    "enabled": false,
+    "every": 8
+  },
+  "interstitial": {
+    "enabled": false,
+    "cooldownSec": 180,
+    "maxPerSession": 1,
+    "maxPerDay": 3
+  }
+}
