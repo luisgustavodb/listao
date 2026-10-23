@@ -1,20 +1,20 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+﻿<!DOCTYPE html>
+<html lang=\"pt-BR\">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, follow">
+<meta charset=\"utf-8\">
+<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+<meta name=\"robots\" content=\"noindex, follow\">
 <title>Lista compartilhada — Listão</title>
-<link rel="icon" type="image/svg+xml" href="/listao/favicon.svg">
-<link rel="icon" type="image/png" sizes="48x48" href="/listao/favicon-48.png">
-<meta property="og:title" content="🛒 Lista de compras compartilhada">
-<meta property="og:description" content="Alguém compartilhou uma lista de compras com você. Toque para abrir no app Listão!">
-<meta property="og:image" content="https://luisgustavodb.github.io/listao/og-logo.png">
-<meta property="og:image:width" content="512">
-<meta property="og:image:height" content="512">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+<link rel=\"icon\" type=\"image/svg+xml\" href=\"/listao/favicon.svg\">
+<link rel=\"icon\" type=\"image/png\" sizes=\"48x48\" href=\"/listao/favicon-48.png\">
+<meta property=\"og:title\" content=\"🛒 Lista de compras compartilhada\">
+<meta property=\"og:description\" content=\"Alguém compartilhou uma lista de compras com você. Toque para abrir no app Listão!\">
+<meta property=\"og:image\" content=\"https://luisgustavodb.github.io/listao/og-logo.png\">
+<meta property=\"og:image:width\" content=\"512\">
+<meta property=\"og:image:height\" content=\"512\">
+<meta property=\"og:type\" content=\"website\">
+<meta name=\"twitter:card\" content=\"summary\">
+<script defer src=\"https://cdn.vercel-insights.com/v1/script.js\"></script>
 <style>
   body { margin:0; font-family:system-ui,-apple-system,sans-serif; background:#fff; color:#181725; }
   .top { background:#53B175; color:#fff; padding:40px 20px 30px; text-align:center; }
@@ -22,95 +22,46 @@
   .top h1 { margin:0; font-size:30px; }
   .top p { margin:8px 0 0; opacity:.9; }
   .card { max-width:420px; margin:24px auto; padding:0 20px; text-align:center; }
-  .btn { display:block; background:#53B175; color:#fff; text-decoration:none; font-weight:700;
-         border-radius:16px; padding:16px; font-size:18px; margin:18px 0; }
+  .btn { display:block; background:#53B175; color:#fff; text-decoration:none; font-weight:700; border-radius:16px; padding:16px; font-size:18px; margin:18px 0; }
   .note { color:#7C7C7C; font-size:14px; line-height:1.5; }
   .made { text-align:center; color:#7C7C7C; font-size:13px; padding:6px 20px 28px; }
   .made a { color:#53B175; font-weight:700; text-decoration:none; }
   .lang-switch { display:flex; gap:2px; justify-content:center; margin:14px auto 0; }
-  .lang-btn { border:1px solid rgba(255,255,255,.5); background:transparent; color:#fff; font-weight:700;
-              font-size:12px; padding:5px 10px; cursor:pointer; }
+  .lang-btn { border:1px solid rgba(255,255,255,.5); background:transparent; color:#fff; font-weight:700; font-size:12px; padding:5px 10px; cursor:pointer; }
   .lang-btn + .lang-btn { border-left:none; }
   .lang-btn.active { background:#fff; color:#53B175; }
 </style>
 </head>
 <body>
-  <div class="top">
-    <img class="logo" src="simbolo-branco.svg" alt="">
+  <div class=\"top\">
+    <img class=\"logo\" src=\"simbolo-branco.svg\" alt=\"\">
     <h1>Listão</h1>
-    <p data-i18n="received">Você recebeu uma lista de compras!</p>
-    <div class="lang-switch">
-      <button class="lang-btn active" data-lang="pt">PT</button>
-      <button class="lang-btn" data-lang="es">ES</button>
-      <button class="lang-btn" data-lang="en">EN</button>
+    <p data-i18n=\"received\">Você recebeu uma lista de compras!</p>
+    <div class=\"lang-switch\">
+      <button class=\"lang-btn active\" data-lang=\"pt\">PT</button>
+      <button class=\"lang-btn\" data-lang=\"es\">ES</button>
+      <button class=\"lang-btn\" data-lang=\"en\">EN</button>
     </div>
   </div>
-  <div class="card">
-    <a class="btn" id="openBtn" href="#" data-i18n="open_btn">Abrir no app</a>
-    <p class="note" id="msg" data-i18n="opening">Abrindo o app… Se nada acontecer, toque no botão acima.</p>
+  <div class=\"card\">
+    <a class=\"btn\" id=\"openBtn\" href=\"#\" data-i18n=\"open_btn\">Abrir no app</a>
+    <p class=\"note\" id=\"msg\" data-i18n=\"opening\">Abrindo o app… Se nada acontecer, toque no botão acima.</p>
+    <p class=\"note\" data-i18n=\"langnote\">O app abre no idioma do seu celular.</p>
   </div>
-  <footer class="made"><span data-i18n="made_by">Feita com 💚 no</span> <a href="https://listao-br.vercel.app/">Listão</a></footer>
+  <footer class=\"made\"><span data-i18n=\"made_by\">Feita com 💚 no</span> <a href=\"https://listao-br.vercel.app/\">Listão</a></footer>
 <script>
   var I18N = {
-    pt: { received:"Você recebeu uma lista de compras!", opening:"Abrindo o app… Se nada acontecer, toque no botão acima.",
-          not_opened:"Não abriu? Verifique se o Listão está instalado neste aparelho.",
-          invalid:"Link incompleto — peça o link completo para quem enviou.",
-          open_btn:"Abrir no app", made_by:"Feita com 💚 no" },
-    es: { received:"¡Has recibido una lista de la compra!", opening:"Abriendo la app… Si no pasa nada, toca el botón de arriba.",
-          not_opened:"¿No se abrió? Verifica que Listão esté instalado en este aparato.",
-          invalid:"Enlace incompleto — pide el enlace completo a quien lo envió.",
-          open_btn:"Abrir en la app", made_by:"Hecha con 💚 en" },
-    en: { received:"You received a shopping list!", opening:"Opening the app… If nothing happens, tap the button above.",
-          not_opened:"Didn’t open? Check if Listão is installed on this device.",
-          invalid:"Incomplete link — ask the sender for the full link.",
-          open_btn:"Open in app", made_by:"Made with 💚 in" }
+    pt: { received:\"Você recebeu uma lista de compras!\", opening:\"Abrindo o app… Se nada acontecer, toque no botão acima.\", not_opened:\"Não abriu? Verifique se o Listão está instalado neste aparelho.\", invalid:\"Link incompleto — peça o link completo para quem enviou.\", open_btn:\"Abrir no app\", made_by:\"Feita com 💚 no\", langnote:\"O app abre no idioma do seu celular.\" },
+    es: { received:\"¡Has recibido una lista de la compra!\", opening:\"Abriendo la app… Si no pasa nada, toca el botón de arriba.\", not_opened:\"¿No se abrió? Verifica que Listão esté instalado en este aparato.\", invalid:\"Enlace incompleto — pide el enlace completo a quien lo envió.\", open_btn:\"Abrir en la app\", made_by:\"Hecha con 💚 en\", langnote:\"La app se abre en el idioma de tu móvil.\" },
+    en: { received:\"You received a shopping list!\", opening:\"Opening the app… If nothing happens, tap the button above.\", not_opened:\"Didn’t open? Check if Listão is installed on this device.\", invalid:\"Incomplete link — ask the sender for the full link.\", open_btn:\"Open in app\", made_by:\"Made with 💚 in\", langnote:\"The app opens in your phone's language.\" }
   };
-  function detectLang() {
-    var saved = null;
-    try { saved = localStorage.getItem("listao-lang"); } catch (e) {}
-    if (saved && I18N[saved]) return saved;
-    var nav = (navigator.language || "pt").toLowerCase();
-    if (nav.indexOf("es") === 0) return "es";
-    if (nav.indexOf("en") === 0) return "en";
-    return "pt";
-  }
-  function applyLang(lang) {
-    if (!I18N[lang]) lang = "pt";
-    var dict = I18N[lang];
-    document.querySelectorAll("[data-i18n]").forEach(function (el) {
-      var k = el.getAttribute("data-i18n");
-      if (dict[k] != null) el.textContent = dict[k];
-    });
-    document.querySelectorAll(".lang-btn").forEach(function (b) {
-      b.classList.toggle("active", b.getAttribute("data-lang") === lang);
-    });
-  }
-  var LANG = detectLang();
-  document.querySelectorAll(".lang-btn").forEach(function (b) {
-    b.addEventListener("click", function () {
-      LANG = b.getAttribute("data-lang");
-      applyLang(LANG);
-      try { localStorage.setItem("listao-lang", LANG); } catch (e) {}
-    });
-  });
-  applyLang(LANG);
+  function detectLang(){var s=null;try{s=localStorage.getItem('listao-lang');}catch(e){}if(s&&I18N[s])return s;var n=(navigator.language||'pt').toLowerCase();if(n.indexOf('es')===0)return'es';if(n.indexOf('en')===0)return'en';return'pt';}
+  function applyLang(l){if(!I18N[l])l='pt';var d=I18N[l];document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');if(d[k]!=null)el.textContent=d[k];});document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.getAttribute('data-lang')===l);});}
+  var LANG=detectLang();document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){LANG=b.getAttribute('data-lang');applyLang(LANG);try{localStorage.setItem('listao-lang',LANG);}catch(e){}});});applyLang(LANG);
 </script>
 <script>
-  var d = new URLSearchParams(location.search).get("d");
-  var btn = document.getElementById("openBtn");
-  var msg = document.getElementById("msg");
-  if (d) {
-    var scheme = "mercadinho://l/" + d;
-    var intent = "intent://l/" + d + "#Intent;scheme=mercadinho;package=br.com.mercadinho;end";
-    var ua = navigator.userAgent.toLowerCase();
-    btn.href = /android/.test(ua) ? intent : scheme;
-    setTimeout(function () {
-      msg.textContent = I18N[LANG].not_opened;
-    }, 1500);
-  } else {
-    msg.textContent = I18N[LANG].invalid;
-    btn.style.display = "none";
-  }
+  var d=new URLSearchParams(location.search).get('d');var btn=document.getElementById('openBtn');var msg=document.getElementById('msg');
+  if(d){var ua=navigator.userAgent.toLowerCase();btn.href=/android/.test(ua)?('intent://l/'+d+'#Intent;scheme=mercadinho;package=br.com.mercadinho;end'):('mercadinho://l/'+d);setTimeout(function(){msg.textContent=I18N[LANG].not_opened;},1500);}else{msg.textContent=I18N[LANG].invalid;btn.style.display='none';}
 </script>
 </body>
 </html>
