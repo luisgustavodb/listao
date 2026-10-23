@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -28,19 +28,20 @@
 <meta name="twitter:image" content="https://listao-br.vercel.app/og-negro.png">
 <meta name="google-site-verification" content="gfNusm2SWcJuj-ExviBEShkn10A6k7FlF6Pcpx3s6PU">
 <script type="application/ld+json">
-{\"@context\":\"https://schema.org\",\"@type\":\"MobileApplication\",\"name\":\"Listão\",\"applicationCategory\":\"ShoppingApplication\",\"operatingSystem\":\"Android 8.0+\",\"inLanguage\":\"en\",\"url\":\"https://listao-br.vercel.app/en/\",\"downloadUrl\":\"https://listao-br.vercel.app/listao-v1.5.apk\",\"installUrl\":\"https://listao-br.vercel.app/en/\",\"softwareVersion\":\"1.5\",\"fileSize\":\"17.5MB\",\"description\":\"Free Android shopping list app: works offline, no signup, track spending & budget, share lists via WhatsApp link.\",\"screenshot\":[\"https://listao-br.vercel.app/prints/lista-marcados.jpg\",\"https://listao-br.vercel.app/prints/categorias.jpg\",\"https://listao-br.vercel.app/prints/graficos.jpg\",\"https://listao-br.vercel.app/prints/historico.jpg\"],\"offers\":{\"@type\":\"Offer\",\"price\":\"0\",\"priceCurrency\":\"USD\"},\"author\":{\"@type\":\"Person\",\"name\":\"Luis Gustavo Del Bianco\"}}
+{"@context":"https://schema.org","@type":"MobileApplication","name":"Listão","applicationCategory":"ShoppingApplication","operatingSystem":"Android 8.0+","inLanguage":"en","url":"https://listao-br.vercel.app/en/","downloadUrl":"https://listao-br.vercel.app/listao-v1.5.apk","installUrl":"https://listao-br.vercel.app/en/","softwareVersion":"1.5","fileSize":"17.5MB","description":"Free Android shopping list app: works offline, no signup, track spending and budget, share lists via WhatsApp link.","screenshot":["https://listao-br.vercel.app/prints/lista-marcados.jpg","https://listao-br.vercel.app/prints/categorias.jpg","https://listao-br.vercel.app/prints/graficos.jpg","https://listao-br.vercel.app/prints/historico.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"},"author":{"@type":"Person","name":"Luis Gustavo Del Bianco"}}
 </script>
 <script type="application/ld+json">
-{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Why isn't it on the Play Store?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"For now we distribute the APK directly: it's lighter, no middleman, and updates come from the same link. We plan to publish to Play Store when the app is more mature.\"}},{\"@type\":\"Question\",\"name\":\"Is it safe? My phone showed a warning\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"That warning appears for any app installed outside the Play Store. The APK is signed, only asks for internet permission, and your data stays on your device.\"}},{\"@type\":\"Question\",\"name\":\"Does it work on iPhone?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Not yet. Listão is Android-only for now. Shared list links open a web page for iPhone users.\"}},{\"@type\":\"Question\",\"name\":\"How do I update later?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Just download again from this same link and install on top. Your lists and history remain intact.\"}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is it not on the Play Store?","acceptedAnswer":{"@type":"Answer","text":"For now we distribute the APK directly: it is lighter, no middleman, and updates come from the same link. We plan to publish to the Play Store when the app matures."}},{"@type":"Question","name":"Is it safe? My phone showed a warning","acceptedAnswer":{"@type":"Answer","text":"That warning appears for any app installed outside the store. The APK is signed, only asks for internet permission, and your data stays on your device."}},{"@type":"Question","name":"Does it work on iPhone?","acceptedAnswer":{"@type":"Answer","text":"Not yet. Listão is Android only for now. Shared list links open a web page for iPhone users."}},{"@type":"Question","name":"How do I update later?","acceptedAnswer":{"@type":"Answer","text":"Download again from this same link and install on top. Your lists and history stay intact."}}]}
 </script>
-<link rel=\"icon\" type=\"image/svg+xml\" href=\"../favicon.svg\">
-<link rel=\"icon\" type=\"image/png\" sizes=\"48x48\" href=\"../favicon-48.png\">
-<link rel=\"stylesheet\" href=\"../estilo.css\">
-<link rel=\"preload\" as=\"image\" href=\"../prints/lista-marcados.webp\" fetchpriority=\"high\">
-<script defer src=\"https://cdn.vercel-insights.com/v1/script.js\"></script>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="stylesheet" href="/estilo.css">
+<link rel="preload" as="image" href="/prints/lista-marcados.webp" fetchpriority="high">
+<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <style>
   .lang-switch { display:flex; gap:2px; margin-left:10px; }
-  .lang-btn { display:inline-flex; align-items:center; border:1px solid #d5ded8; background:#fff; color:#181725; font-weight:700; font-size:12px; padding:5px 9px; text-decoration:none; border-radius:8px 0 0 8px; }
+  .lang-btn { display:inline-flex; align-items:center; border:1px solid #d5ded8; background:#fff; color:#181725; font-weight:700; font-size:12px;
+              padding:5px 9px; text-decoration:none; border-radius:8px 0 0 8px; }
   .lang-btn + .lang-btn { border-radius:0; border-left:none; }
   .lang-btn:last-child { border-radius:0 8px 8px 0; }
   .lang-btn.active { background:#53B175; border-color:#53B175; color:#fff; }
@@ -48,146 +49,293 @@
 </style>
 </head>
 <body>
-<header class=\"top\">
-  <div class=\"container top-row\">
-    <a class=\"brand\" href=\"#\"><img src=\"../simbolo-verde.svg\" alt=\"Listão logo\"><span>Listão</span></a>
+
+<header class="top">
+  <div class="container top-row">
+    <a class="brand" href="/">
+      <img src="/simbolo-verde.svg" alt="Listão logo">
+      <span>Listão</span>
+    </a>
     <nav>
-      <a href=\"#recursos\">Features</a>
-      <a href=\"#como-instalar\">How to install</a>
-      <a href=\"#perguntas\">FAQ</a>
+      <a href="#recursos">Features</a>
+      <a href="#como-instalar">How to install</a>
+      <a href="#perguntas">FAQ</a>
     </nav>
-    <div class=\"lang-switch\">
-      <a class=\"lang-btn\" href=\"../\">PT</a>
-      <a class=\"lang-btn\" href=\"../es/\">ES</a>
-      <a class=\"lang-btn active\" href=\"./\">EN</a>
+    <div class="lang-switch">
+      <a class="lang-btn" href="/">PT</a>
+      <a class="lang-btn" href="/es/">ES</a>
+      <a class="lang-btn active" href="./">EN</a>
     </div>
-    <a class=\"btn primary small\" href=\"../listao-v1.5.apk\" download=\"listao-v1.5.apk\">Download free</a>
+    <a class="btn primary small" data-trk="click_download" data-pos="header" href="/listao-v1.5.apk" download="listao-v1.5.apk">Download free</a>
   </div>
 </header>
+
 <main>
-<section class=\"hero\">
-  <div class=\"container hero-grid\">
-    <div class=\"hero-copy\">
-      <h1>Your shopping list, <span class=\"verde\">that simple</span></h1>
-      <p class=\"lead\">Free, offline and no signup. Build the list, track spending and share via a WhatsApp link — tap and it opens.</p>
-      <div class=\"btn-row\">
-        <a class=\"btn primary\" href=\"../listao-v1.5.apk\" download=\"listao-v1.5.apk\">⬇ Download free (Android)</a>
-        <a class=\"btn ghost\" href=\"https://wa.me/?text=Download%20List%C3%A3o%20free%3A%20offline%20shopping%20list%20app%20no%20signup%20https%3A%2F%2Flistao-br.vercel.app%2Fen%2F\" target=\"_blank\" rel=\"noopener\">📤 Share</a>
-        <a class=\"btn ghost\" href=\"#como-instalar\">How to install</a>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <h1>Your shopping list, <span class="verde">that simple</span></h1>
+      <p class="lead">Free, offline and no signup. Build the list, track spending and share via a WhatsApp link — tap and it opens.</p>
+      <div class="btn-row">
+        <a class="btn primary" data-trk="click_download" data-pos="hero" href="/listao-v1.5.apk" download="listao-v1.5.apk">⬇ Download free (Android)</a>
+        <a class="btn ghost" data-trk="click_share" data-pos="hero" data-share href="https://wa.me/?text=Download%20List%C3%A3o%20free%3A%20offline%20shopping%20list%20app%20with%20no%20signup%20https%3A%2F%2Flistao-br.vercel.app%2Fen%2F" target="_blank" rel="noopener">📤 Share</a>
+        <a class="btn ghost" data-trk="click_como_instalar" href="#como-instalar">How to install</a>
       </div>
-      <p class=\"meta\">v1.5 · ~18 MB · direct APK · updated today</p>
-      <div class=\"badges\">
-        <span class=\"pill\">✓ Share via link</span>
-        <span class=\"pill\">✓ Data stays on your device</span>
-        <span class=\"pill\">✓ No signup</span>
-        <span class=\"pill\">✓ The app opens in your phone's language</span>
+      <p class="meta">v1.5 · ~18 MB · direct APK · updated today</p>
+      <div class="badges">
+        <span class="pill">✓ Share via link</span>
+        <span class="pill">✓ Data stays on your device</span>
+        <span class="pill">✓ No signup</span>
+        <span class="pill">✓ The app opens in your phone's language</span>
       </div>
     </div>
-    <div class=\"phone\"><div class=\"screen\"><img src=\"../prints/lista-marcados.webp\" alt=\"Listão app with checked items\" width=\"1080\" height=\"2460\" fetchpriority=\"high\"></div></div>
+
+    <div class="phone">
+      <div class="screen">
+        <img src="/prints/lista-marcados.webp" alt="Listão app with checked items" width="1080" height="2460" fetchpriority="high">
+      </div>
+    </div>
   </div>
 </section>
-<section id=\"recursos\" class=\"container features\">
-  <div class=\"feat\">
-    <div class=\"feat-copy\">
-      <span class=\"icon-chip\"><svg viewBox=\"0 0 24 24\"><path d=\"M3.9,12c0,-1.71 1.39,-3.1 3.1,-3.1h4V7H7c-2.76,0 -5,2.24 -5,5s2.24,5 5,5h4v-1.9H7c-1.71,0 -3.1,-1.39 -3.1,-3.1zM8,13h8v-2H8v2zM17,7h-4v1.9h4c1.71,0 3.1,1.39 3.1,3.1s-1.39,3.1 -3.1,3.1h-4V17h4c2.76,0 5,-2.24 5,-5s-2.24,-5 -5,-5z\"/></svg></span>
+
+<section id="recursos" class="container features">
+
+  <div class="feat">
+    <div class="feat-copy">
+      <span class="icon-chip">
+        <svg viewBox="0 0 24 24"><path d="M3.9,12c0,-1.71 1.39,-3.1 3.1,-3.1h4V7H7c-2.76,0 -5,2.24 -5,5s2.24,5 5,5h4v-1.9H7c-1.71,0 -3.1,-1.39 -3.1,-3.1zM8,13h8v-2H8v2zM17,7h-4v1.9h4c1.71,0 3.1,1.39 3.1,3.1s-1.39,3.1 -3.1,3.1h-4V17h4c2.76,0 5,-2.24 5,-5s-2.24,-5 -5,-5z"/></svg>
+      </span>
       <h2>Organize and share</h2>
-      <p>Categories with color and emoji. Share the list via a WhatsApp link — anyone with the link can open it.</p>
-      <a class=\"btn ghost\" href=\"#baixar\">See how it works</a>
+      <p>Categories with color and emoji for every corner of the list. When it is time to split the shopping, the list travels inside a WhatsApp link — tap and it opens.</p>
+      <a class="btn ghost" href="#baixar" data-trk="click_ver_prints" data-pos="org">See how it works</a>
     </div>
-    <div class=\"feat-img\"><img src=\"../prints/categorias.webp\" alt=\"List organized by categories\" width=\"1080\" height=\"2460\" loading=\"lazy\" decoding=\"async\"></div>
+    <div class="feat-img">
+      <img src="/prints/categorias.webp" alt="List organized by categories in Listão" width="1080" height="2460" loading="lazy" decoding="async">
+    </div>
   </div>
-  <div class=\"feat rev\">
-    <div class=\"feat-copy\">
-      <span class=\"icon-chip\"><svg viewBox=\"0 0 24 24\"><path d=\"M11.8,10.9c-2.27,-0.59 -3,-1.2 -3,-2.15 0,-1.09 1.01,-1.85 2.7,-1.85 1.78,0 2.44,0.85 2.5,2.1h2.21c-0.07,-1.72 -1.12,-3.3 -3.21,-3.81V3h-3v2.16c-1.94,0.42 -3.5,1.68 -3.5,3.61 0,2.31 1.91,3.46 4.7,4.13 2.5,0.6 3,1.48 3,2.41 0,0.69 -0.49,1.79 -2.7,1.79 -2.06,0 -2.87,-0.92 -2.98,-2.1h-2.2c0.12,2.19 1.76,3.42 3.68,3.83V21h3v-2.15c1.95,-0.37 3.5,-1.5 3.5,-3.55 0,-2.84 -2.43,-3.81 -4.7,-4.4z\"/></svg></span>
+
+  <div class="feat rev">
+    <div class="feat-copy">
+      <span class="icon-chip">
+        <svg viewBox="0 0 24 24"><path d="M11.8,10.9c-2.27,-0.59 -3,-1.2 -3,-2.15 0,-1.09 1.01,-1.85 2.7,-1.85 1.78,0 2.44,0.85 2.5,2.1h2.21c-0.07,-1.72 -1.12,-3.3 -3.21,-3.81V3h-3v2.16c-1.94,0.42 -3.5,1.68 -3.5,3.61 0,2.31 1.91,3.46 4.7,4.13 2.5,0.6 3,1.48 3,2.41 0,0.69 -0.49,1.79 -2.7,1.79 -2.06,0 -2.87,-0.92 -2.98,-2.1h-2.2c0.12,2.19 1.76,3.42 3.68,3.83V21h3v-2.15c1.95,-0.37 3.5,-1.5 3.5,-3.55 0,-2.84 -2.43,-3.81 -4.7,-4.4z"/></svg>
+      </span>
       <h2>Spending under control</h2>
-      <p>Price, quantity and total in real time. Set a budget and track where your money goes with charts.</p>
-      <a class=\"btn ghost\" href=\"#baixar\">See how it works</a>
+      <p>Price, quantity and total in real time. Set a budget and follow the charts to see where the money went.</p>
+      <a class="btn ghost" href="#baixar" data-trk="click_ver_prints" data-pos="gasto">See how it works</a>
     </div>
-    <div class=\"feat-img\"><img src=\"../prints/graficos.webp\" alt=\"Spending charts\" width=\"1080\" height=\"2460\" loading=\"lazy\" decoding=\"async\"></div>
+    <div class="feat-img">
+      <img src="/prints/graficos.webp" alt="Spending charts by category in Listão" width="1080" height="2460" loading="lazy" decoding="async">
+    </div>
   </div>
-  <div class=\"feat\">
-    <div class=\"feat-copy\">
-      <span class=\"icon-chip\"><svg viewBox=\"0 0 24 24\"><path d=\"M13,3c-4.97,0 -9,4.03 -9,9L1,12l3.89,3.89 0.07,0.14L9,12L6,12c0,-3.87 3.13,-7 7,-7s7,3.13 7,7 -3.13,7 -7,7c-1.93,0 -3.68,-0.79 -4.94,-2.06l-1.42,1.42C8.27,19.99 10.51,21 13,21c4.97,0 9,-4.03 9,-9s-4.03,-9 -9,-9zM12,8v5l4.28,2.54 0.72,-1.21 -3.5,-2.08L13.5,8L12,8z\"/></svg></span>
-      <h2>Never forget what you bought</h2>
-      <p>Finished purchases go straight to history. Compare prices between trips with ease.</p>
-      <a class=\"btn ghost\" href=\"#baixar\">See how it works</a>
+
+  <div class="feat">
+    <div class="feat-copy">
+      <span class="icon-chip">
+        <svg viewBox="0 0 24 24"><path d="M13,3c-4.97,0 -9,4.03 -9,9L1,12l3.89,3.89 0.07,0.14L9,12L6,12c0,-3.87 3.13,-7 7,-7s7,3.13 7,7 -3.13,7 -7,7c-1.93,0 -3.68,-0.79 -4.94,-2.06l-1.42,1.42C8.27,19.99 10.51,21 13,21c4.97,0 9,-4.03 9,-9s-4.03,-9 -9,-9zM12,8v5l4.28,2.54 0.72,-1.21 -3.5,-2.08L13.5,8L12,8z"/></svg>
+      </span>
+      <h2>Never forget what you already bought</h2>
+      <p>Every finished purchase becomes history. See what you bought, when and for how much — great to compare prices between trips.</p>
+      <a class="btn ghost" href="#baixar" data-trk="click_ver_prints" data-pos="historico">See how it works</a>
     </div>
-    <div class=\"feat-img\"><img src=\"../prints/historico.webp\" alt=\"Purchase history\" width=\"1080\" height=\"2460\" loading=\"lazy\" decoding=\"async\"></div>
+    <div class="feat-img">
+      <img src="/prints/historico.webp" alt="Purchase history in Listão" width="1080" height="2460" loading="lazy" decoding="async">
+    </div>
   </div>
-  <div class=\"feat rev\">
-    <div class=\"feat-copy\">
-      <span class=\"icon-chip\"><svg viewBox=\"0 0 24 24\"><path d=\"M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM10,17l-5,-5 1.41,-1.41L10,14.17l7.59,-7.59L19,8l-9,9z\"/></svg></span>
-      <h2>Finish with one tap</h2>
-      <p>At checkout, finish and mark everything you bought as saved in history with the correct total.</p>
-      <a class=\"btn ghost\" href=\"#baixar\">See how it works</a>
+
+  <div class="feat rev">
+    <div class="feat-copy">
+      <span class="icon-chip">
+        <svg viewBox="0 0 24 24"><path d="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM10,17l-5,-5 1.41,-1.41L10,14.17l7.59,-7.59L19,8l-9,9z"/></svg>
+      </span>
+      <h2>Close the purchase with one tap</h2>
+      <p>At the end of shopping, finish: what you checked becomes a saved purchase in history, with the right total.</p>
+      <a class="btn ghost" href="#baixar" data-trk="click_ver_prints" data-pos="finalizar">See how it works</a>
     </div>
-    <div class=\"feat-img\"><img src=\"../prints/finalizar.webp\" alt=\"Finish purchase\" width=\"1080\" height=\"2460\" loading=\"lazy\" decoding=\"async\"></div>
+    <div class="feat-img">
+      <img src="/prints/finalizar.webp" alt="Finish purchase in Listão" width="1080" height="2460" loading="lazy" decoding="async">
+    </div>
+  </div>
+
+</section>
+
+<section id="como-instalar" class="steps-band">
+  <div class="container">
+    <h2 class="center">Ready in 3 steps</h2>
+    <p class="center sub2">No store, no account, no hassle.</p>
+    <div class="steps">
+      <div class="step">
+        <span class="icon-chip">
+          <svg viewBox="0 0 24 24"><path d="M19,9h-4V3H9v6H5l7,7 7,-7zM5,18v2h14v-2H5z"/></svg>
+        </span>
+        <h3>1 · Download the file</h3>
+        <p>Tap the button and the APK downloads straight to your device.</p>
+      </div>
+      <div class="step">
+        <span class="icon-chip">
+          <svg viewBox="0 0 24 24"><path d="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM10,17l-5,-5 1.41,-1.41L10,14.17l7.59,-7.59L19,8l-9,9z"/></svg>
+        </span>
+        <h3>2 · Install the file</h3>
+        <p>Tap the downloaded file and confirm. Done.</p>
+      </div>
+      <div class="step">
+        <span class="icon-chip">
+          <svg viewBox="0 0 24 24"><path d="M17,1.01L7,1c-1.1,0 -2,0.9 -2,2v18c0,1.1 0.9,2 2,2h10c1.1,0 2,-0.9 2,-2V3c0,-1.1 -0.9,-1.99 -2,-1.99zM17,19H7V5h10v14z"/></svg>
+        </span>
+        <h3>3 · Open Listão</h3>
+        <p>Create your first list and never forget what was missing again.</p>
+      </div>
+    </div>
   </div>
 </section>
-<section id=\"como-instalar\" class=\"steps-band\">
-  <div class=\"container\">
-    <h2 class=\"center\">Ready in 3 steps</h2>
-    <p class=\"center sub2\">No store, no account, no hassle.</p>
-    <div class=\"steps\">
-      <div class=\"step\"><span class=\"icon-chip\"><svg viewBox=\"0 0 24 24\"><path d=\"M19,9h-4V3H9v6H5l7,7 7,-7zM5,18v2h14v-2H5z\"/></svg></span><h3>1 · Download the file</h3><p>Tap the button and the APK downloads to your device.</p></div>
-      <div class=\"step\"><span class=\"icon-chip\"><svg viewBox=\"0 0 24 24\"><path d=\"M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM10,17l-5,-5 1.41,-1.41L10,14.17l7.59,-7.59L19,8l-9,9z\"/></svg></span><h3>2 · Install</h3><p>Open the downloaded file and confirm.</p></div>
-      <div class=\"step\"><span class=\"icon-chip\"><svg viewBox=\"0 0 24 24\"><path d=\"M17,1.01L7,1c-1.1,0 -2,0.9 -2,2v18c0,1.1 0.9,2 2,2h10c1.1,0 2,-0.9 2,-2V3c0,-1.1 -0.9,-1.99 -2,-1.99zM17,19H7V5h10v14z\"/></svg></span><h3>3 · Open Listão</h3><p>Create your first list and start shopping smarter.</p></div>
-    </div>
-  </div>
-</section>
-<section class=\"container price\">
-  <h2 class=\"center\">Truly free</h2>
-  <p class=\"center sub2\">No catch. The app stays free forever.</p>
-  <div class=\"price-card\">
-    <div class=\"price-val\"><span>R$ 0</span> <span>/ forever</span></div>
-    <ul class=\"price-list\">
-      <li><svg viewBox=\"0 0 24 24\"><path d=\"M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z\"/></svg> Unlimited lists and items</li>
-      <li><svg viewBox=\"0 0 24 24\"><path d=\"M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z\"/></svg> Share via link and file</li>
-      <li><svg viewBox=\"0 0 24 24\"><path d=\"M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z\"/></svg> Purchase and spending history</li>
-      <li><svg viewBox=\"0 0 24 24\"><path d=\"M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z\"/></svg> Backup to .json</li>
-      <li><svg viewBox=\"0 0 24 24\"><path d=\"M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z\"/></svg> Light and dark theme</li>
+
+<section class="container price">
+  <h2 class="center">Truly free</h2>
+  <p class="center sub2">No catch: the list will never sit behind a paywall.</p>
+  <div class="price-card">
+    <div class="price-val"><span>R$ 0</span> <span>/ forever</span></div>
+    <ul class="price-list">
+      <li><svg viewBox="0 0 24 24"><path d="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z"/></svg> Unlimited lists and items</li>
+      <li><svg viewBox="0 0 24 24"><path d="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z"/></svg> Sharing via link and file</li>
+      <li><svg viewBox="0 0 24 24"><path d="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z"/></svg> Purchase and spending history</li>
+      <li><svg viewBox="0 0 24 24"><path d="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z"/></svg> Backup to .json file</li>
+      <li><svg viewBox="0 0 24 24"><path d="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z"/></svg> Light and dark theme</li>
     </ul>
-    <a class=\"btn primary wide\" href=\"../listao-v1.5.apk\" download=\"listao-v1.5.apk\">⬇ Download free (Android)</a>
-    <p class=\"pix-note\">Like it? <b>Support with Pix ☕</b> — button in the app Settings.</p>
-    <p class=\"soon\">Coming soon: sync between devices and editable shared lists.</p>
+    <a class="btn primary wide" data-trk="click_download" data-pos="preco" href="/listao-v1.5.apk" download="listao-v1.5.apk">⬇ Download free (Android)</a>
+    <p class="pix-note">Liked it? <b>Support with Pix ☕</b> — button in the app Settings.</p>
+    <p class="soon">Coming soon: sync between devices and editable shared lists.</p>
   </div>
 </section>
-<section id=\"baixar\" class=\"final\">
-  <div class=\"container final-grid\">
+
+<section id="baixar" class="final">
+  <div class="container final-grid">
     <div>
-      <img class=\"final-logo\" src=\"../simbolo-branco.svg\" alt=\"\">
+      <img class="final-logo" src="/simbolo-branco.svg" alt="">
       <h2>Download Listão today</h2>
-      <p>Smarter grocery trips. Never forget anything again.</p>
-      <a class=\"btn white\" href=\"../listao-v1.5.apk\" download=\"listao-v1.5.apk\">⬇ Download free (APK)</a>
-      <div style=\"margin-top:12px\"><a class=\"wa-link\" href=\"https://wa.me/?text=Download%20List%C3%A3o%20free%20for%20Android%3A%20https%3A%2F%2Flistao-br.vercel.app%2Fen%2F\" target=\"_blank\" rel=\"noopener\">📤 Share Listão</a></div>
+      <p>Your next trip to the market, cheaper and forgetting nothing.</p>
+      <a class="btn white" data-trk="click_download" data-pos="final" href="/listao-v1.5.apk" download="listao-v1.5.apk">⬇ Download free (APK)</a>
+      <div style="margin-top:12px"><a class="wa-link" data-trk="click_share" data-pos="final" data-share href="https://wa.me/?text=Download%20List%C3%A3o%20free%3A%20offline%20shopping%20list%20app%20with%20no%20signup%20https%3A%2F%2Flistao-br.vercel.app%2Fen%2F" target="_blank" rel="noopener">📤 Share Listão</a></div>
+      <div style="margin-top:12px"><a class="wa-link" data-trk="click_whatsapp" href="https://wa.me/?text=Download%20List%C3%A3o%20free%20for%20Android%3A%20https%3A%2F%2Flistao-br.vercel.app%2Fen%2F" target="_blank" rel="noopener">On the computer? Send the link to your WhatsApp</a></div>
     </div>
-    <div><img class=\"qr-img\" src=\"../qr-download.png\" alt=\"QR code to download Listão\"></div>
+    <div><img class="qr-img" src="/qr-download.png" alt="QR code to download Listão"></div>
   </div>
 </section>
-<section class=\"container quotes\">
-  <h2 class=\"center\">What people say</h2>
-  <div class=\"quote-grid\">
-    <figure class=\"quote\"><blockquote>“The 'you didn't tell me' fight is over — now we share the same list.”</blockquote><figcaption><img class=\"avatar\" src=\"../prints/avatar-mariana.jpg\" alt=\"Mariana\" width=\"80\" height=\"80\" loading=\"lazy\"> <b>Mariana S.</b></figcaption></figure>
-    <figure class=\"quote\"><blockquote>“I use it at the store with no signal. Simple and fast, just what I needed.”</blockquote><figcaption><img class=\"avatar\" src=\"../prints/avatar-carlos.jpg\" alt=\"Carlos\" width=\"80\" height=\"80\" loading=\"lazy\"> <b>Carlos H.</b></figcaption></figure>
+
+<section class="container quotes">
+  <h2 class="center">Who already uses it</h2>
+  <div class="quote-grid">
+    <figure class="quote">
+      <blockquote>“The fight over ‘you did not tell me we were out’ is over — now the list is the same for both of us.”</blockquote>
+      <figcaption><img class="avatar" src="/prints/avatar-mariana.jpg" alt="Mariana" width="80" height="80" loading="lazy"> <b>Mariana S.</b> · shares the list with her husband</figcaption>
+    </figure>
+    <figure class="quote">
+      <blockquote>“I use it at the market with no signal on my phone. Simple and fast, just what I needed.”</blockquote>
+      <figcaption><img class="avatar" src="/prints/avatar-carlos.jpg" alt="Carlos" width="80" height="80" loading="lazy"> <b>Carlos H.</b> · does the family shopping</figcaption>
+    </figure>
   </div>
 </section>
-<section id=\"perguntas\" class=\"container faq\">
-  <h2 class=\"center\">Frequently asked questions</h2>
-  <details><summary>Why isn't it on the Play Store?</summary><p>We distribute directly for now: lighter, no middleman, same link for updates.</p></details>
-  <details><summary>Is it safe? My phone showed a warning</summary><p>The warning is normal for apps outside the Play Store. The APK is signed, only asks for internet, data stays on your device.</p></details>
-  <details><summary>Does it work on iPhone?</summary><p>Not yet. Listão is Android-only. Shared links open a web page for iPhone users.</p></details>
-  <details><summary>How do I update?</summary><p>Download again from this link and install on top. Your lists and history stay intact.</p></details>
+
+<section id="modelos" class="container">
+  <h2 class="center">Ready-made list templates and guides</h2>
+  <p class="center sub2">Start with a ready list — tap and it opens right in the app.</p>
+  <div class="badges" style="justify-content:center">
+    <a class="pill" style="text-decoration:none;color:inherit" href="/modelos/feira.html">🥕 Farmers market list</a>
+    <a class="pill" style="text-decoration:none;color:inherit" href="/modelos/churrasco.html">🥩 BBQ list</a>
+    <a class="pill" style="text-decoration:none;color:inherit" href="/modelos/mes.html">🛒 Monthly list</a>
+    <a class="pill" style="text-decoration:none;color:inherit" href="/guias/compartilhar-whatsapp.html">📲 Share on WhatsApp</a>
+  </div>
 </section>
+
+<section id="perguntas" class="container faq">
+  <h2 class="center">Frequently asked questions</h2>
+  <details data-q="play">
+    <summary>Why is it not on the Play Store?</summary>
+    <p>For now we distribute directly: it is lighter, no middleman, and updates land on the same link. The plan is to hit the Play Store when the app matures.</p>
+  </details>
+  <details data-q="seguro">
+    <summary>Is it safe? My phone showed a warning</summary>
+    <p>The warning shows up for any app installed outside the store. The APK is signed, asks only for internet permission and your data stays on your device.</p>
+  </details>
+  <details data-q="iphone">
+    <summary>Does it work on iPhone?</summary>
+    <p>Not yet. Today Listão is Android — the shared link opens a page with the list for iPhone users.</p>
+  </details>
+  <details data-q="atualizar">
+    <summary>How do I update later?</summary>
+    <p>Download again from this same link and install on top. Your lists and history stay intact.</p>
+  </details>
+</section>
+
+<section id="contato" class="container feedback">
+  <h2 class="center">Talk to us</h2>
+  <p class="center sub2">Suggestion, praise or bug? Tell us — we read everything.</p>
+  <form class="fb-form" action="https://formsubmit.co/luisgustavogu2008@gmail.com" method="POST">
+    <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+    <input type="hidden" name="_subject" value="New feedback from Listão site (EN)">
+    <input type="hidden" name="_next" value="https://listao-br.vercel.app/obrigado.html">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <label><span>Your name</span>
+      <input type="text" name="nome" placeholder="What should we call you?" required maxlength="60">
+    </label>
+    <label><span>Your e-mail (so we can reply)</span>
+      <input type="email" name="email" placeholder="you@email.com" required maxlength="80">
+    </label>
+    <label><span>What did you think of the app?</span>
+      <textarea name="mensagem" rows="4" placeholder="Tell us everything: what you loved, what broke, what was missing..." required maxlength="2000"></textarea>
+    </label>
+    <button class="btn primary wide" type="submit">Send feedback</button>
+    <p class="fb-alt">Prefer direct e-mail? <a href="mailto:luisgustavogu2008@gmail.com">luisgustavogu2008@gmail.com</a></p>
+  </form>
+</section>
+
 </main>
+
 <footer>
-  <div class=\"container foot-grid\">
-    <div class=\"foot-brand\"><a class=\"brand\" href=\"#\"><img src=\"../simbolo-verde.svg\" alt=\"\"><span>Listão</span></a><p>The shopping list that lives in your pocket and shares with the people you live with.</p></div>
-    <div><h4>Product</h4><a href=\"#baixar\">Download app</a><a href=\"#recursos\">Features</a></div>
-    <div><h4>Help</h4><a href=\"#como-instalar\">How to install</a><a href=\"#perguntas\">FAQ</a></div>
-    <div><h4>About</h4><a href=\"../sobre.html\">About Listão</a><a href=\"../privacidade.html\">Privacy</a><a href=\"#\">Support with Pix</a></div>
+  <div class="container foot-grid">
+    <div class="foot-brand">
+      <a class="brand" href="/"><img src="/simbolo-verde.svg" alt=""><span>Listão</span></a>
+      <p>The shopping list that lives in your pocket — and shares with whoever you live with.</p>
+    </div>
+    <div>
+      <h4>Product</h4>
+      <a href="#baixar">Download the app</a>
+      <a href="#recursos">Features</a>
+      <a href="/modelos/feira.html">List templates</a>
+      <a href="/guias/compartilhar-whatsapp.html">WhatsApp guide</a>
+    </div>
+    <div>
+      <h4>Help</h4>
+      <a href="#como-instalar">How to install</a>
+      <a href="#perguntas">FAQ</a>
+      <a href="#contato">Contact</a>
+    </div>
+    <div>
+      <h4>About</h4>
+      <a href="/sobre.html">About Listão</a>
+      <a href="/privacidade.html">Privacy</a>
+      <a href="#">Support with Pix</a>
+    </div>
   </div>
-  <div class=\"container copy\">© 2026 Listão · made in Brazil · v1.5</div>
+  <div class="container copy">© 2026 Listão · made in Brazil · v1.5</div>
 </footer>
-<script src=\"../trk.js\" defer></script>
+
+<script src="/trk.js" defer></script>
+<script>
+  (function () {
+    var links = document.querySelectorAll("[data-share]");
+    if (!links.length) return;
+    var share = { title: "Listão — free shopping list",
+                  text: "Free shopping list, offline and no signup. Download the app:",
+                  url: "https://listao-br.vercel.app/en/" };
+    links.forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        if (!navigator.share) return;
+        e.preventDefault();
+        navigator.share(share).catch(function () {});
+      });
+    });
+  })();
+</script>
 </body>
 </html>
