@@ -35,6 +35,15 @@
 <link rel="stylesheet" href="estilo.css">
 <link rel="preload" as="image" href="prints/lista-marcados.webp" fetchpriority="high">
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+<style>
+  .lang-switch { display:flex; gap:2px; margin-left:10px; }
+  .lang-btn { border:1px solid #d5ded8; background:#fff; color:#181725; font-weight:700; font-size:12px;
+              padding:5px 9px; cursor:pointer; border-radius:8px 0 0 8px; }
+  .lang-btn + .lang-btn { border-radius:0; border-left:none; }
+  .lang-btn:last-child { border-radius:0 8px 8px 0; }
+  .lang-btn.active { background:#53B175; border-color:#53B175; color:#fff; }
+  @media (max-width:720px) { .lang-switch { margin-left:6px; } .lang-btn { padding:4px 7px; font-size:11px; } }
+</style>
 </head>
 <body>
 
@@ -46,11 +55,16 @@
       <span>Listão</span>
     </a>
     <nav>
-      <a href="#recursos">Recursos</a>
-      <a href="#como-instalar">Como instalar</a>
-      <a href="#perguntas">Perguntas</a>
+      <a href="#recursos" data-i18n="nav.recursos">Recursos</a>
+      <a href="#como-instalar" data-i18n="nav.instalar">Como instalar</a>
+      <a href="#perguntas" data-i18n="nav.perguntas">Perguntas</a>
     </nav>
-    <a class="btn primary small" data-trk="click_download" data-pos="header" href="listao-v1.5.apk" download="listao-v1.5.apk">Baixar grátis</a>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="pt">PT</button>
+      <button class="lang-btn" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <a class="btn primary small" data-trk="click_download" data-pos="header" href="listao-v1.5.apk" download="listao-v1.5.apk" data-i18n="nav.baixar">Baixar grátis</a>
   </div>
 </header>
 
@@ -60,18 +74,18 @@
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <h1>Sua lista de compras, <span class="verde">simples assim</span></h1>
-      <p class="lead">Grátis, offline e sem cadastro. Monte a lista, controle o gasto e compartilhe por um link no WhatsApp — quem toca, abre.</p>
+      <h1 data-i18n="hero.title">Sua lista de compras, <span class="verde">simples assim</span></h1>
+      <p class="lead" data-i18n="hero.lead">Grátis, offline e sem cadastro. Monte a lista, controle o gasto e compartilhe por um link no WhatsApp — quem toca, abre.</p>
       <div class="btn-row">
-        <a class="btn primary" data-trk="click_download" data-pos="hero" href="listao-v1.5.apk" download="listao-v1.5.apk">⬇ Baixar grátis (Android)</a>
-        <a class="btn ghost" data-trk="click_share" data-pos="hero" data-share href="https://wa.me/?text=Baixe%20o%20List%C3%A3o%20gr%C3%A1tis%3A%20app%20de%20lista%20de%20compras%20offline%20e%20sem%20cadastro%20https%3A%2F%2Flistao-br.vercel.app%2F" target="_blank" rel="noopener">📤 Compartilhar</a>
-        <a class="btn ghost" data-trk="click_como_instalar" href="#como-instalar">Como instalar</a>
+        <a class="btn primary" data-trk="click_download" data-pos="hero" href="listao-v1.5.apk" download="listao-v1.5.apk" data-i18n="hero.btn_download">⬇ Baixar grátis (Android)</a>
+        <a class="btn ghost" data-trk="click_share" data-pos="hero" data-share href="https://wa.me/?text=Baixe%20o%20List%C3%A3o%20gr%C3%A1tis%3A%20app%20de%20lista%20de%20compras%20offline%20e%20sem%20cadastro%20https%3A%2F%2Flistao-br.vercel.app%2F" target="_blank" rel="noopener" data-i18n="hero.btn_share">📤 Compartilhar</a>
+        <a class="btn ghost" data-trk="click_como_instalar" href="#como-instalar" data-i18n="hero.btn_instalar">Como instalar</a>
       </div>
-      <p class="meta">v1.5 · ~18 MB · APK direto · atualizado hoje</p>
+      <p class="meta" data-i18n="hero.meta">v1.5 · ~18 MB · APK direto · atualizado hoje</p>
       <div class="badges">
-        <span class="pill">✓ Sem anúncios invasivos</span>
-        <span class="pill">✓ Dados no seu aparelho</span>
-        <span class="pill">✓ Sem cadastro</span>
+        <span class="pill" data-i18n="hero.badge1">✓ Compartilha por link</span>
+        <span class="pill" data-i18n="hero.badge2">✓ Dados no seu aparelho</span>
+        <span class="pill" data-i18n="hero.badge3">✓ Sem cadastro</span>
       </div>
     </div>
 
@@ -92,9 +106,9 @@
       <span class="icon-chip">
         <svg viewBox="0 0 24 24"><path d="M3.9,12c0,-1.71 1.39,-3.1 3.1,-3.1h4V7H7c-2.76,0 -5,2.24 -5,5s2.24,5 5,5h4v-1.9H7c-1.71,0 -3.1,-1.39 -3.1,-3.1zM8,13h8v-2H8v2zM17,7h-4v1.9h4c1.71,0 3.1,1.39 3.1,3.1s-1.39,3.1 -3.1,3.1h-4V17h4c2.76,0 5,-2.24 5,-5s-2.24,-5 -5,-5z"/></svg>
       </span>
-      <h2>Organize e compartilhe</h2>
-      <p>Categorias com cor e emoji pra cada cantinho da lista. E na hora de dividir as compras, a lista viaja dentro de um link do WhatsApp — quem toca, abre.</p>
-      <a class="btn ghost" href="#baixar" data-trk="click_ver_prints" data-pos="org">Ver como funciona</a>
+      <h2 data-i18n="feat1.title">Organize e compartilhe</h2>
+      <p data-i18n="feat1.desc">Categorias com cor e emoji pra cada cantinho da lista. E na hora de dividir as compras, a lista viaja dentro de um link do WhatsApp — quem toca, abre.</p>
+      <a class="btn ghost" href="#baixar" data-trk="click_ver_prints" data-pos="org" data-i18n="feat.btn">Ver como funciona</a>
     </div>
     <div class="feat-img">
       <img src="prints/categorias.webp" alt="Lista de compras organizada por categorias no app Listão" width="1080" height="2460" loading="lazy" decoding="async">
@@ -106,9 +120,9 @@
       <span class="icon-chip">
         <svg viewBox="0 0 24 24"><path d="M11.8,10.9c-2.27,-0.59 -3,-1.2 -3,-2.15 0,-1.09 1.01,-1.85 2.7,-1.85 1.78,0 2.44,0.85 2.5,2.1h2.21c-0.07,-1.72 -1.12,-3.3 -3.21,-3.81V3h-3v2.16c-1.94,0.42 -3.5,1.68 -3.5,3.61 0,2.31 1.91,3.46 4.7,4.13 2.5,0.6 3,1.48 3,2.41 0,0.69 -0.49,1.79 -2.7,1.79 -2.06,0 -2.87,-0.92 -2.98,-2.1h-2.2c0.12,2.19 1.76,3.42 3.68,3.83V21h3v-2.15c1.95,-0.37 3.5,-1.5 3.5,-3.55 0,-2.84 -2.43,-3.81 -4.7,-4.4z"/></svg>
       </span>
-      <h2>Gasto sob controle</h2>
-      <p>Preço, quantidade e total em tempo real. Defina um orçamento e acompanhe nos gráficos pra onde o dinheiro foi.</p>
-      <a class="btn ghost" href="#baixar" data-trk="click_ver_prints" data-pos="gasto">Ver como funciona</a>
+      <h2 data-i18n="feat2.title">Gasto sob controle</h2>
+      <p data-i18n="feat2.desc">Preço, quantidade e total em tempo real. Defina um orçamento e acompanhe nos gráficos pra onde o dinheiro foi.</p>
+      <a class="btn ghost" href="#baixar" data-trk="click_ver_prints" data-pos="gasto" data-i18n="feat.btn">Ver como funciona</a>
     </div>
     <div class="feat-img">
       <img src="prints/graficos.webp" alt="Gráficos de gastos por categoria no app Listão" width="1080" height="2460" loading="lazy" decoding="async">
@@ -120,9 +134,9 @@
       <span class="icon-chip">
         <svg viewBox="0 0 24 24"><path d="M13,3c-4.97,0 -9,4.03 -9,9L1,12l3.89,3.89 0.07,0.14L9,12L6,12c0,-3.87 3.13,-7 7,-7s7,3.13 7,7 -3.13,7 -7,7c-1.93,0 -3.68,-0.79 -4.94,-2.06l-1.42,1.42C8.27,19.99 10.51,21 13,21c4.97,0 9,-4.03 9,-9s-4.03,-9 -9,-9zM12,8v5l4.28,2.54 0.72,-1.21 -3.5,-2.08L13.5,8L12,8z"/></svg>
       </span>
-      <h2>Nunca esqueça o que já comprou</h2>
-      <p>Cada compra finalizada vira histórico. Veja o que comprou, quando e por quanto — ótimo pra comparar preços entre idas.</p>
-      <a class="btn ghost" href="#baixar" data-trk="click_ver_prints" data-pos="historico">Ver como funciona</a>
+      <h2 data-i18n="feat3.title">Nunca esqueça o que já comprou</h2>
+      <p data-i18n="feat3.desc">Cada compra finalizada vira histórico. Veja o que comprou, quando e por quanto — ótimo pra comparar preços entre idas.</p>
+      <a class="btn ghost" href="#baixar" data-trk="click_ver_prints" data-pos="historico" data-i18n="feat.btn">Ver como funciona</a>
     </div>
     <div class="feat-img">
       <img src="prints/historico.webp" alt="Histórico de compras no app Listão" width="1080" height="2460" loading="lazy" decoding="async">
@@ -134,9 +148,9 @@
       <span class="icon-chip">
         <svg viewBox="0 0 24 24"><path d="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM10,17l-5,-5 1.41,-1.41L10,14.17l7.59,-7.59L19,8l-9,9z"/></svg>
       </span>
-      <h2>Feche a compra com um toque</h2>
-      <p>No fim das compras, finalize: o que você marcou vira uma compra salva no histórico, com o total certinho.</p>
-      <a class="btn ghost" href="#baixar" data-trk="click_ver_prints" data-pos="finalizar">Ver como funciona</a>
+      <h2 data-i18n="feat4.title">Feche a compra com um toque</h2>
+      <p data-i18n="feat4.desc">No fim das compras, finalize: o que você marcou vira uma compra salva no histórico, com o total certinho.</p>
+      <a class="btn ghost" href="#baixar" data-trk="click_ver_prints" data-pos="finalizar" data-i18n="feat.btn">Ver como funciona</a>
     </div>
     <div class="feat-img">
       <img src="prints/finalizar.webp" alt="Finalizar compra com total no app Listão" width="1080" height="2460" loading="lazy" decoding="async">
@@ -148,29 +162,29 @@
 <!-- ===== 3 PASSOS ===== -->
 <section id="como-instalar" class="steps-band">
   <div class="container">
-    <h2 class="center">Pronto em 3 passos</h2>
-    <p class="center sub2">Sem loja, sem conta, sem complicação.</p>
+    <h2 class="center" data-i18n="steps.title">Pronto em 3 passos</h2>
+    <p class="center sub2" data-i18n="steps.sub">Sem loja, sem conta, sem complicação.</p>
     <div class="steps">
       <div class="step">
         <span class="icon-chip">
           <svg viewBox="0 0 24 24"><path d="M19,9h-4V3H9v6H5l7,7 7,-7zM5,18v2h14v-2H5z"/></svg>
         </span>
-        <h3>1 · Baixe o arquivo</h3>
-        <p>Toque no botão e o APK baixa direto no aparelho.</p>
+        <h3 data-i18n="step1.title">1 · Baixe o arquivo</h3>
+        <p data-i18n="step1.desc">Toque no botão e o APK baixa direto no aparelho.</p>
       </div>
       <div class="step">
         <span class="icon-chip">
           <svg viewBox="0 0 24 24"><path d="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10S17.52,2 12,2zM10,17l-5,-5 1.41,-1.41L10,14.17l7.59,-7.59L19,8l-9,9z"/></svg>
         </span>
-        <h3>2 · Instale o arquivo</h3>
-        <p>Toque no arquivo baixado e confirme. Pronto.</p>
+        <h3 data-i18n="step2.title">2 · Instale o arquivo</h3>
+        <p data-i18n="step2.desc">Toque no arquivo baixado e confirme. Pronto.</p>
       </div>
       <div class="step">
         <span class="icon-chip">
           <svg viewBox="0 0 24 24"><path d="M17,1.01L7,1c-1.1,0 -2,0.9 -2,2v18c0,1.1 0.9,2 2,2h10c1.1,0 2,-0.9 2,-2V3c0,-1.1 -0.9,-1.99 -2,-1.99zM17,19H7V5h10v14z"/></svg>
         </span>
-        <h3>3 · Abra o Listão</h3>
-        <p>Crie sua primeira lista e nunca mais esqueça o que faltou.</p>
+        <h3 data-i18n="step3.title">3 · Abra o Listão</h3>
+        <p data-i18n="step3.desc">Crie sua primeira lista e nunca mais esqueça o que faltou.</p>
       </div>
     </div>
   </div>
@@ -178,20 +192,20 @@
 
 <!-- ===== GRÁTIS DE VERDADE (posição do “planos”) ===== -->
 <section class="container price">
-  <h2 class="center">Grátis de verdade</h2>
-  <p class="center sub2">Sem pegadinha: a lista nunca vai ficar atrás de paywall.</p>
+  <h2 class="center" data-i18n="price.title">Grátis de verdade</h2>
+  <p class="center sub2" data-i18n="price.sub">Sem pegadinha: a lista nunca vai ficar atrás de paywall.</p>
   <div class="price-card">
-    <div class="price-val">R$ 0 <span>/ para sempre</span></div>
+    <div class="price-val"><span data-i18n="price.val">R$ 0</span> <span data-i18n="price.period">/ para sempre</span></div>
     <ul class="price-list">
-      <li><svg viewBox="0 0 24 24"><path d="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z"/></svg> Listas e itens ilimitados</li>
-      <li><svg viewBox="0 0 24 24"><path d="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z"/></svg> Compartilhamento por link e arquivo</li>
-      <li><svg viewBox="0 0 24 24"><path d="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z"/></svg> Histórico de compras e gastos</li>
-      <li><svg viewBox="0 0 24 24"><path d="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z"/></svg> Backup em arquivo .json</li>
-      <li><svg viewBox="0 0 24 24"><path d="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z"/></svg> Tema claro e escuro</li>
+      <li><svg viewBox="0 0 24 24"><path d="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z"/></svg> <span data-i18n="price.item1">Listas e itens ilimitados</span></li>
+      <li><svg viewBox="0 0 24 24"><path d="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z"/></svg> <span data-i18n="price.item2">Compartilhamento por link e arquivo</span></li>
+      <li><svg viewBox="0 0 24 24"><path d="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z"/></svg> <span data-i18n="price.item3">Histórico de compras e gastos</span></li>
+      <li><svg viewBox="0 0 24 24"><path d="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z"/></svg> <span data-i18n="price.item4">Backup em arquivo .json</span></li>
+      <li><svg viewBox="0 0 24 24"><path d="M9,16.17L4.83,12l-1.42,1.41L9,19 21,7l-1.41,-1.41z"/></svg> <span data-i18n="price.item5">Tema claro e escuro</span></li>
     </ul>
-    <a class="btn primary wide" data-trk="click_download" data-pos="preco" href="listao-v1.5.apk" download="listao-v1.5.apk">⬇ Baixar grátis (Android)</a>
-    <p class="pix-note">Gostou? <b>Apoie com Pix ☕</b> — botão nos Ajustes do app.</p>
-    <p class="soon">Em breve: sincronização entre aparelhos e listas compartilhadas editáveis.</p>
+    <a class="btn primary wide" data-trk="click_download" data-pos="preco" href="listao-v1.5.apk" download="listao-v1.5.apk" data-i18n="price.btn">⬇ Baixar grátis (Android)</a>
+    <p class="pix-note" data-i18n="price.pix">Gostou? <b>Apoie com Pix ☕</b> — botão nos Ajustes do app.</p>
+    <p class="soon" data-i18n="price.soon">Em breve: sincronização entre aparelhos e listas compartilhadas editáveis.</p>
   </div>
 </section>
 
@@ -200,11 +214,11 @@
   <div class="container final-grid">
     <div>
       <img class="final-logo" src="simbolo-branco.svg" alt="">
-      <h2>Baixe o Listão hoje</h2>
-      <p>Sua próxima ida ao mercado, mais barata e sem esquecer nada.</p>
-      <a class="btn white" data-trk="click_download" data-pos="final" href="listao-v1.5.apk" download="listao-v1.5.apk">⬇ Baixar grátis (APK)</a>
-      <div style="margin-top:12px"><a class="wa-link" data-trk="click_share" data-pos="final" data-share href="https://wa.me/?text=Baixe%20o%20List%C3%A3o%20gr%C3%A1tis%3A%20app%20de%20lista%20de%20compras%20offline%20e%20sem%20cadastro%20https%3A%2F%2Flistao-br.vercel.app%2F" target="_blank" rel="noopener">📤 Compartilhar o Listão</a></div>
-      <div style="margin-top:12px"><a class="wa-link" data-trk="click_whatsapp" href="https://wa.me/?text=Baixe%20o%20List%C3%A3o%20gr%C3%A1tis%20para%20Android%3A%20https%3A%2F%2Flistao-br.vercel.app%2F" target="_blank" rel="noopener">No computador? Envie o link pro seu WhatsApp</a></div>
+      <h2 data-i18n="final.title">Baixe o Listão hoje</h2>
+      <p data-i18n="final.desc">Sua próxima ida ao mercado, mais barata e sem esquecer nada.</p>
+      <a class="btn white" data-trk="click_download" data-pos="final" href="listao-v1.5.apk" download="listao-v1.5.apk" data-i18n="final.btn">⬇ Baixar grátis (APK)</a>
+      <div style="margin-top:12px"><a class="wa-link" data-trk="click_share" data-pos="final" data-share href="https://wa.me/?text=Baixe%20o%20List%C3%A3o%20gr%C3%A1tis%3A%20app%20de%20lista%20de%20compras%20offline%20e%20sem%20cadastro%20https%3A%2F%2Flistao-br.vercel.app%2F" target="_blank" rel="noopener" data-i18n="final.share">📤 Compartilhar o Listão</a></div>
+      <div style="margin-top:12px"><a class="wa-link" data-trk="click_whatsapp" href="https://wa.me/?text=Baixe%20o%20List%C3%A3o%20gr%C3%A1tis%20para%20Android%3A%20https%3A%2F%2Flistao-br.vercel.app%2F" target="_blank" rel="noopener" data-i18n="final.whats">No computador? Envie o link pro seu WhatsApp</a></div>
     </div>
     <div><img class="qr-img" src="qr-download.png" alt="QR Code para baixar o Listão"></div>
   </div>
@@ -212,73 +226,73 @@
 
 <!-- ===== DEPOIMENTOS ===== -->
 <section class="container quotes">
-  <h2 class="center">Quem já usa</h2>
+  <h2 class="center" data-i18n="quotes.title">Quem já usa</h2>
   <div class="quote-grid">
     <figure class="quote">
-      <blockquote>“Acabou a briga do ‘você não avisou que faltava’ — agora a lista fica igual pros dois.”</blockquote>
-      <figcaption><img class="avatar" src="prints/avatar-mariana.jpg" alt="Mariana" width="80" height="80" loading="lazy"> <b>Mariana S.</b> · compartilha a lista com o marido</figcaption>
+      <blockquote data-i18n="quote1.text">“Acabou a briga do ‘você não avisou que faltava’ — agora a lista fica igual pros dois.”</blockquote>
+      <figcaption><img class="avatar" src="prints/avatar-mariana.jpg" alt="Mariana" width="80" height="80" loading="lazy"> <b>Mariana S.</b> · <span data-i18n="quote1.meta">compartilha a lista com o marido</span></figcaption>
     </figure>
     <figure class="quote">
-      <blockquote>“Uso no mercado com o celular sem sinal. Simples e rápido, do jeito que eu precisava.”</blockquote>
-      <figcaption><img class="avatar" src="prints/avatar-carlos.jpg" alt="Carlos" width="80" height="80" loading="lazy"> <b>Carlos H.</b> · faz as compras da família</figcaption>
+      <blockquote data-i18n="quote2.text">“Uso no mercado com o celular sem sinal. Simples e rápido, do jeito que eu precisava.”</blockquote>
+      <figcaption><img class="avatar" src="prints/avatar-carlos.jpg" alt="Carlos" width="80" height="80" loading="lazy"> <b>Carlos H.</b> · <span data-i18n="quote2.meta">faz as compras da família</span></figcaption>
     </figure>
   </div>
 </section>
 
 <!-- ===== MODELOS E GUIAS ===== -->
 <section id="modelos" class="container">
-  <h2 class="center">Modelos de lista prontos e guias</h2>
-  <p class="center sub2">Comece com uma lista pronta — toque e ela abre direto no app.</p>
+  <h2 class="center" data-i18n="models.title">Modelos de lista prontos e guias</h2>
+  <p class="center sub2" data-i18n="models.sub">Comece com uma lista pronta — toque e ela abre direto no app.</p>
   <div class="badges" style="justify-content:center">
-    <a class="pill" style="text-decoration:none;color:inherit" href="modelos/feira.html">🥕 Lista da feira</a>
-    <a class="pill" style="text-decoration:none;color:inherit" href="modelos/churrasco.html">🥩 Lista de churrasco</a>
-    <a class="pill" style="text-decoration:none;color:inherit" href="modelos/mes.html">🛒 Lista do mês</a>
-    <a class="pill" style="text-decoration:none;color:inherit" href="guias/compartilhar-whatsapp.html">📲 Compartilhar no WhatsApp</a>
+    <a class="pill" style="text-decoration:none;color:inherit" href="modelos/feira.html" data-i18n="models.feira">🥕 Lista da feira</a>
+    <a class="pill" style="text-decoration:none;color:inherit" href="modelos/churrasco.html" data-i18n="models.churrasco">🥩 Lista de churrasco</a>
+    <a class="pill" style="text-decoration:none;color:inherit" href="modelos/mes.html" data-i18n="models.mes">🛒 Lista do mês</a>
+    <a class="pill" style="text-decoration:none;color:inherit" href="guias/compartilhar-whatsapp.html" data-i18n="models.whats">📲 Compartilhar no WhatsApp</a>
   </div>
 </section>
 
 <!-- ===== FAQ ===== -->
 <section id="perguntas" class="container faq">
-  <h2 class="center">Perguntas frequentes</h2>
+  <h2 class="center" data-i18n="faq.title">Perguntas frequentes</h2>
   <details data-q="play">
-      <summary>Por que não está na Play Store?</summary>
-    <p>Por enquanto distribuímos direto: fica mais leve, sem intermediário e com atualização no mesmo link. A ideia é entrar na Play quando o app amadurecer.</p>
+      <summary data-i18n="faq1.q">Por que não está na Play Store?</summary>
+    <p data-i18n="faq1.a">Por enquanto distribuímos direto: fica mais leve, sem intermediário e com atualização no mesmo link. A ideia é entrar na Play quando o app amadurecer.</p>
   </details>
   <details data-q="seguro">
-      <summary>É seguro? O celular mostrou um aviso</summary>
-    <p>O aviso aparece para qualquer app instalado de fora da loja. O APK é assinado, pede só permissão de internet e seus dados ficam no seu aparelho.</p>
+      <summary data-i18n="faq2.q">É seguro? O celular mostrou um aviso</summary>
+    <p data-i18n="faq2.a">O aviso aparece para qualquer app instalado de fora da loja. O APK é assinado, pede só permissão de internet e seus dados ficam no seu aparelho.</p>
   </details>
   <details data-q="iphone">
-      <summary>Funciona no iPhone?</summary>
-    <p>Ainda não. Hoje o Listão é Android — o link compartilhado abre uma página com a lista pra quem tem iPhone.</p>
+      <summary data-i18n="faq3.q">Funciona no iPhone?</summary>
+    <p data-i18n="faq3.a">Ainda não. Hoje o Listão é Android — o link compartilhado abre uma página com a lista pra quem tem iPhone.</p>
   </details>
   <details data-q="atualizar">
-      <summary>Como atualizo depois?</summary>
-    <p>Baixe de novo neste mesmo link e instale por cima. Suas listas e o histórico ficam intactos.</p>
+      <summary data-i18n="faq4.q">Como atualizo depois?</summary>
+    <p data-i18n="faq4.a">Baixe de novo neste mesmo link e instale por cima. Suas listas e o histórico ficam intactos.</p>
   </details>
 </section>
 
 <!-- ===== FEEDBACK ===== -->
 <section id="contato" class="container feedback">
-  <h2 class="center">Fale com a gente</h2>
-  <p class="center sub2">Sugestão, elogio ou bug? Conta pra gente — a gente lê tudo.</p>
+  <h2 class="center" data-i18n="fb.title">Fale com a gente</h2>
+  <p class="center sub2" data-i18n="fb.sub">Sugestão, elogio ou bug? Conta pra gente — a gente lê tudo.</p>
   <form class="fb-form" action="https://formsubmit.co/luisgustavogu2008@gmail.com" method="POST">
     <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
     <input type="hidden" name="_subject" value="Novo feedback do site Listão">
     <input type="hidden" name="_next" value="https://listao-br.vercel.app/obrigado.html">
     <input type="hidden" name="_template" value="table">
     <input type="hidden" name="_captcha" value="false">
-    <label>Seu nome
-      <input type="text" name="nome" placeholder="Como podemos te chamar?" required maxlength="60">
+    <label><span data-i18n="fb.name">Seu nome</span>
+      <input type="text" name="nome" data-i18n-ph="fb.name_ph" placeholder="Como podemos te chamar?" required maxlength="60">
     </label>
-    <label>Seu e-mail (pra gente responder)
-      <input type="email" name="email" placeholder="voce@email.com" required maxlength="80">
+    <label><span data-i18n="fb.email">Seu e-mail (pra gente responder)</span>
+      <input type="email" name="email" data-i18n-ph="fb.email_ph" placeholder="voce@email.com" required maxlength="80">
     </label>
-    <label>O que você achou do app?
-      <textarea name="mensagem" rows="4" placeholder="Conta tudo: o que amou, o que travou, o que faltou..." required maxlength="2000"></textarea>
+    <label><span data-i18n="fb.msg">O que você achou do app?</span>
+      <textarea name="mensagem" rows="4" data-i18n-ph="fb.msg_ph" placeholder="Conta tudo: o que amou, o que travou, o que faltou..." required maxlength="2000"></textarea>
     </label>
-    <button class="btn primary wide" type="submit">Enviar feedback</button>
-    <p class="fb-alt">Prefere e-mail direto? <a href="mailto:luisgustavogu2008@gmail.com">luisgustavogu2008@gmail.com</a></p>
+    <button class="btn primary wide" type="submit" data-i18n="fb.send">Enviar feedback</button>
+    <p class="fb-alt"><span data-i18n="fb.alt">Prefere e-mail direto?</span> <a href="mailto:luisgustavogu2008@gmail.com">luisgustavogu2008@gmail.com</a></p>
   </form>
 </section>
 
@@ -289,32 +303,33 @@
   <div class="container foot-grid">
     <div class="foot-brand">
       <a class="brand" href="#"><img src="simbolo-verde.svg" alt=""><span>Listão</span></a>
-      <p>A lista de compras que mora no seu bolso — e divide com quem você vive.</p>
+      <p data-i18n="foot.desc">A lista de compras que mora no seu bolso — e divide com quem você vive.</p>
     </div>
     <div>
-      <h4>Produto</h4>
-      <a href="#baixar">Baixar o app</a>
-      <a href="#recursos">Recursos</a>
-      <a href="modelos/feira.html">Modelos de lista</a>
-      <a href="guias/compartilhar-whatsapp.html">Guia do WhatsApp</a>
+      <h4 data-i18n="foot.produto">Produto</h4>
+      <a href="#baixar" data-i18n="foot.baixar">Baixar o app</a>
+      <a href="#recursos" data-i18n="foot.recursos">Recursos</a>
+      <a href="modelos/feira.html" data-i18n="foot.modelos">Modelos de lista</a>
+      <a href="guias/compartilhar-whatsapp.html" data-i18n="foot.guia">Guia do WhatsApp</a>
     </div>
     <div>
-      <h4>Ajuda</h4>
-      <a href="#como-instalar">Como instalar</a>
-      <a href="#perguntas">Perguntas</a>
-      <a href="#contato">Contato</a>
+      <h4 data-i18n="foot.ajuda">Ajuda</h4>
+      <a href="#como-instalar" data-i18n="foot.instalar">Como instalar</a>
+      <a href="#perguntas" data-i18n="foot.perguntas">Perguntas</a>
+      <a href="#contato" data-i18n="foot.contato">Contato</a>
     </div>
     <div>
-      <h4>Sobre</h4>
-      <a href="sobre.html">Sobre o Listão</a>
-      <a href="privacidade.html">Privacidade</a>
-      <a href="#">Apoie com Pix</a>
+      <h4 data-i18n="foot.sobre_t">Sobre</h4>
+      <a href="sobre.html" data-i18n="foot.sobre">Sobre o Listão</a>
+      <a href="privacidade.html" data-i18n="foot.privacidade">Privacidade</a>
+      <a href="#" data-i18n="foot.pix">Apoie com Pix</a>
     </div>
   </div>
-  <div class="container copy">© 2026 Listão · feito no Brasil · v1.5</div>
+  <div class="container copy" data-i18n="foot.copy">© 2026 Listão · feito no Brasil · v1.5</div>
 </footer>
 
 <script src="trk.js" defer></script>
+<script src="i18n.js" defer></script>
 <script>
   // Compartilhar: usa o menu nativo do celular (Web Share API); sem suporte, cai no WhatsApp.
   (function () {
